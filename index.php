@@ -19,7 +19,7 @@
 <!--  navigation bar -->
 
 <nav class="navbar navbar-expand-lg fixed-top " style="background-color: whitesmoke!important;">
-  <a class="navbar-brand" href="#"><img src="Image\logo.png"></a>
+  <a class="navbar-brand" href="#"><img src="Image\Seralance logo.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -33,22 +33,17 @@
         <a class="nav-link" href="#how">how It works? |</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">what do we offer? |</a>
+        <a class="nav-link" href="#offer">what do we offer? |</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">about us |</a>
+        <a class="nav-link" href="#about">about us |</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">contact us |</a>
+        <a class="nav-link" href="#contact">contact us |</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">FAQ |</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Policy</a>
-      </li>
-      
-     
+        <a class="nav-link" href="#faq">FAQ </a>
+      </li>   
     </ul>
     <form class="form-inline my-2 my-lg-0 mr-5">
     <li class="nav-item"  style="list-style-type: none;">
@@ -75,14 +70,14 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="Image\coat.jpg" alt="First slide">
+      <img class="d-block w-100" src="Image\banner1.jpg" alt="First slide">
      
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="Image\computer.jpg" alt="Second slide">
+      <img class="d-block w-100" src="Image\banner2.png" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="Image\mug.jpg" alt="Third slide">
+      <img class="d-block w-100" src="Image\banner3.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -99,22 +94,26 @@
 <!--  part 2 -->
 <div class="container fluid">
 
-<div class="row mt-5" >
+<div class="row mt-2" >
 <div class="col-sm-6">
 <div class="jumbotron">
-<h1>are you service seeker?</h1>
-			<p>It's easy. Simply post a job you need completed and receive competitive bids from freelancers within minutes. Whatever your needs, there will be a freelancer to get it done: from web design, mobile app development, virtual assistants, product manufacturing, and graphic design (and a whole lot more). It is the simplest and safest way to get work done online.</p>
-			<p></p>
-			<a href="loginReg.php" class="btn btn-success btn-lg">Get Started</a>
+<h2 style="margin-top: -40px; ">are you service seeker?</h2>
+			<p>If you are a service seeker, Simply post a job you need completed and receive 
+      competitive bids from freelancers within minutes. Whatever your needs, 
+      there will be a freelancer to get it done: from web design, mobile app development,
+       virtual assistants,  and graphic design . It is the simplest way to 
+       get work done online.</p>
+			</p>
+			<a href="loginReg.php" class="btn btn-success btn-lg ml-5">Get Started</a>
 </div>
 </div>
 
 <div class="col-sm-6">
 <div class="jumbotron">
-<h1>Are you service provider?</h1>
+<h2 style="margin-top: -40px; ">Are you service provider?</h2>
 			<p>If you are an expert in any kind of computer related or online work, then do not hesitate to join our platform. It is easy to use and payment is secured. It is a great platform to those people who are skillful. So do not miss the chance to explore the job posts and make some money.</p>
 			<p></p>
-			<a href="loginReg.php" class="btn btn-primary btn-lg">Get Started</a>
+			<a href="loginReg.php" class="btn btn-success btn-lg ml-5">Get Started</a>
 </div>
 
 </div>
@@ -126,50 +125,103 @@
 <!--  -->
 
 <!--How it works-->
-<div style="background:#cce5ff">
-<div class="container text-center" style="padding:4%;" id="how">
-	<h1 class="card header2" style="background:#007BFF">How it works</h1>
-	<div class="row card" style="padding:30px 60px 30px 60px;margin:30px;">
-		<div class="col-lg-6">
-			<h3>Post Projects For Free</h3>
+<div style="background:#cce5ff" >
+<div class="container text-center" style="padding:4%;"id="how" >
+<div class="container text-center" style="padding:4%;" >
+	<h1 class="card header2" style="background:#007BFF ;"  >How it works</h1>
+	<div class="row card" style="padding:30px 60px 30px 60px;margin:30px; ">
+		<div class="col-lg-12">
+    <div class="row">
+    <div class="col-sm-6">
+    <h3>Post Projects For Free</h3>
 			<p>It's always free to post your project. You’ll automatically begin to receive bids from our freelancers. 
         Also, you can browse through the talent available on our site, and contact them by the contact information.
-        <img src="image/project.jpg"></p>
+        </p>
+        
+    </div>
+    <div class="col-sm-6">
+        <img src="Image\project.jpg" width="200px" height="150px">
+        </div>
+    </div>
+			
 		</div>
-<!-- 		<div class="col-lg-6">
-			<img src="image/project.jpg">
-		</div> -->
+
 	</div>
 	<div class="row card" style="padding:30px 60px 30px 60px;margin:30px;">
+  <div class="row">
 		<div class="col-lg-6">
+    
 			<h3>Deposit Money Safely</h3>
-			<p>We have a complete security to your valuable money. You have the rights to pay the deposited money after the project completed. We have a good refund policy to make sure of satisfaction of the project completed.</p>
+			<p>We have a complete security to your valuable money. You have the rights to pay the deposited money
+       after the project completed. We have a good refund policy to make sure of satisfaction of the project
+        completed.</p>
 		</div>
-		<div class="col-lg-6">
-			<img src="image/depoite.jpg">
-		</div>
-	</div>
+
+    <div class="col-sm-6">
+        <img src="Image\deposit.png" width="200px" height="150px">
+        </div>
+    </div>
+    </div>
+	
 	<div class="row card" style="padding:30px 60px 30px 60px;margin:30px;">
+  <div class="row">
+ 
 		<div class="col-lg-6">
 			<h3>Feel Free To Talk</h3>
 			<p>It is easier to talk with the freelancers here. So before you hire any freelancer feel free to talk with them. Tell them what you need and get the project done in the shortest possible time.</p>
 		</div>
 		<div class="col-lg-6">
-			<img src="image/img03.jpg">
+			<img src="image/message.png" width="200px" height="150px">
 		</div>
 	</div>
+  </div>
 	<div class="row card" style="padding:30px 60px 30px 60px;margin:30px;">
+  <div class="row">
 		<div class="col-lg-6">
-			<h3>Build An Employer Profile</h3>
+			<h3>Build A service seeker Profile</h3>
 			<p>If you have a lot of works to be done or run a small business that needs some freelancers in a daily basis, this is the perfect place for you. Build your employer profile today and start hiring.</p>
 		</div>
 		<div class="col-lg-6">
-			<img src="image/img04.jpg">
+			<img src="image/profile.jpg" width="200px" height="150px" >
 		</div>
 	</div>
 </div>
-</div>
+
 <!--End How it works-->
+
+<!--  what do we offor -->
+<div class="row card" style="padding:30px 60px 30px 60px;margin:30px;" >
+  <div class="row" >
+		<div class="col-lg-6" id="offer">
+    
+			<h3 >what do offer?</h3>
+			<p>We have a complete security to your valuable money. You have the rights to pay the deposited money
+       after the project completed. We have a good refund policy to make sure of satisfaction of the project
+        completed.</p>
+		</div>
+  </div>
+
+    </div>
+
+
+    <!-- about us -->
+    <div class="row card" style="padding:30px 60px 30px 60px;margin:30px;">
+  <div class="row">
+		<div class="col-lg-6">
+    
+			<h3 id="about">about us</h3>
+			<p>We have a complete security to your valuable money. You have the rights to pay the deposited money
+       after the project completed. We have a good refund policy to make sure of satisfaction of the project
+        completed.</p>
+		</div>
+  </div>
+
+    </div>
+
+    <!--  -->
+</div>
+</div>
+<!--  -->
 
 
 
@@ -207,7 +259,7 @@
 
 <!-- contact us -->
 
-<div class="text-center" style="padding:2%;color:#fff;margin-top:20px;">
+<div class="text-center" id="contact" style="padding:2%;color:#fff;margin-top:20px;">
 <hr>
 	<div class="row">
 	<div class="col-lg-3">
@@ -251,7 +303,11 @@
 <!--Footer-->
 <hr style="color: #3B579D; border-style:solid;"> 
 <div class="text-center" style="padding:2%;color:blue;margin-top:1px;">
-footer
+
+<script type="text/javascript">var year = new Date();document.write(year.getFullYear());
+
+</script>
+&copy; Serelance.plc All rights reserved.
 </div>
 
 </body>
