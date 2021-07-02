@@ -1,9 +1,49 @@
+<!DOCTYPE html>
+<html>
 
+<head>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+</html>
+
+<style>
+#GoTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 100px;
+  font-size: 18px;
+}
+
+#GoTopBtn:hover {
+  background-color: green;
+}
+</style>
 <body>
 <!--  navigation bar -->
 <?php include "navigationbar.php"?>
+<a href="" id ="top"></a>
 <!--  -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -167,7 +207,7 @@
 
     <!--  -->
     
-<div class="container-fluid" style="background-color:black">
+<div class="container-fluid">
 <div class="row">
 <div class="col-sm-12">
 
@@ -178,7 +218,7 @@
       <div class="row">
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0" style="margin-left: 50px;;">
-          <h5 class="text-uppercase text-center" style="color: whitesmoke;">Map</h5>
+          <h5 class="text-uppercase text-center" style="color: black;">Map</h5>
           <iframe width="300" height="200"
    id="gmap_canvas" src="https://maps.google.com/maps?q=addis%20ababa%20university&t=&z=13&ie=
    UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
@@ -189,7 +229,7 @@
 
         <!--Grid column-->
         <div class="col-lg-3 col-md-6  mb-md-0 ml-5 ">
-        <h3 style="color: white;">follow us</h3>
+        <h3 style="color: black;">follow us</h3>
 		<a href="https://www.facebook.com/mulugeta.adamu.4/" target="_blank">	<p style="font-size:20px;"><i class="fab fa-facebook-square"> Facebook</i></p></a>
 		<a href="#" target="_blank">	<p style="font-size:20px;color:#D34438;"><i class="fab fa-google-plus-square"> Google</i></p></a>
 		<a href="https://twitter.com/login" target="_blank">	<p style="font-size:20px;color:#2CAAE1;"><i class="fab fa-twitter-square"> Twitter</i></p></a>
@@ -200,7 +240,7 @@
 
         <!--Grid column-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase" style="color: whitesmoke;">message </h5>
+          <h5 class="text-uppercase" style="color: black;">message </h5>
           <form>
   <div class="form-group">
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Full Name">
@@ -226,12 +266,30 @@
 
 <hr style="color: #3B579D; border-style:double; border-color:black; border-width:100%!important; "> 
 
-<div class="text-center" style="padding:2%;color:FFFAF0;margin-top:1px;">
+<div class="text-center" style="padding:2%;color:blue;margin-top:1px;">
 
 <script type="text/javascript">var year = new Date();document.write(year.getFullYear());
 
-</script>
-&copy; Serelance.plc All rights reserved.
+</script>&copy; Serelance.plc All rights reserved.  
+<button onclick="GoTopFunction()" id="GoTopBtn" title="Go to top"><i class="fa fa-2x fa-arrow-up" aria-hidden="true"></i></button>
+<script>
+window.onscroll = function() {
+  scroll()
+};
+
+function scroll() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("GoTopBtn").style.display = "block";
+  } else {
+    document.getElementById("GoTopBtn").style.display = "none";
+  }
+}
+
+function GoTopFunction() {
+  document.documentElement.scrollTop = 0;
+}
+  </script>
+</div> 
 </div>
 </div> 
 

@@ -38,7 +38,11 @@ ul li a{
 ul li:hover{
   border-bottom: 2px solid black;
 }
- a .nav-link .reg:hover{border-bottom: 2px solid black; }
+
+.form-inline a.nav-link:hover{
+  border-bottom: 2px solid black;
+
+ }
 </style>
 
 </head>
@@ -80,14 +84,14 @@ ul li:hover{
     </ul>
     <form class="form-inline my-2 my-lg-0 ">
     <li class="nav-item"  style="list-style-type: none;">
-        <a class="nav-link" href="signin.php"  class="reg" ><?php echo $lang['signin'] ?> </a>
+        <a class="nav-link" href="\LocalFreelanceSystem\registration\login-user.php"  ><?php echo $lang['signin'] ?> </a>
       </li>
     <li class="nav-item dropdown" style="list-style-type: none;">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <?php echo $lang['join'] ?> 
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: #007BFF;">|
-          <a class="dropdown-item" href="#"><?php echo $lang['provider'] ?> </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">|
+          <a class="dropdown-item" href="#" style="margin-top:-30px;"><?php echo $lang['provider'] ?>  </a>
           <a class="dropdown-item" href="#"><?php echo $lang['seeker'] ?> </a>
         </div>
         
@@ -105,3 +109,33 @@ ul li:hover{
     </form>
   </div>
 </nav>
+<script>
+
+const $dropdown = $(".dropdown");
+    const $dropdownToggle = $(".dropdown-toggle");
+    const $dropdownMenu = $(".dropdown-menu");
+    const $dropdownSubMenu = $(".dropdown-submenu");
+    const showClass = "show";
+    $(window).on("load resize", function() {
+        if (this.matchMedia("(min-width: 768px)").matches) {
+            $dropdown.hover(
+                function() {
+                    const $this = $(this);
+                    $this.addClass(showClass);
+                    $this.find($dropdownToggle).attr("aria-expanded", "true");
+                    $this.find($dropdownMenu).addClass(showClass);
+                    $this.find($dropdownSubMenu).addClass(showClass);
+                },
+                function() {
+                    const $this = $(this);
+                    $this.removeClass(showClass);
+                    $this.find($dropdownToggle).attr("aria-expanded", "false");
+                    $this.find($dropdownMenu).removeClass(showClass);
+                    $this.find($dropdownSubMenu).removeClass(showClass);
+                }
+            );
+        } else {
+            $dropdown.off("mouseenter mouseleave");
+        }
+    });
+</script>
