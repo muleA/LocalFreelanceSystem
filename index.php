@@ -21,7 +21,7 @@
 
 <style>
 #GoTopBtn {
-  display: none;
+  /* display: none;
   position: fixed;
   bottom: 10px;
   right: 30px;
@@ -33,7 +33,28 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 100px;
-  font-size: 18px;
+  font-size: 18px; */
+
+  cursor: pointer;
+    font-size: 0.9em;
+    position: fixed;
+    text-align: center;
+    z-index: 9999;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    background: #121212;
+    color: #fff;
+    border-radius: 3px;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    right: 20px;
+    bottom: 20px;
+  
 }
 
 #GoTopBtn:hover {
@@ -271,7 +292,11 @@
 <script type="text/javascript">var year = new Date();document.write(year.getFullYear());
 
 </script>&copy; Serelance.plc All rights reserved.  
-<button onclick="GoTopFunction()" id="GoTopBtn" title="Go to top"><i class="fa fa-2x fa-arrow-up" aria-hidden="true"></i></button>
+<button onclick="GoTopFunction()" id="GoTopBtn" title="Go to top" 
+ data-toggle="tooltip" data-placement="top" title="Tooltip on top"
+  scroll to top
+
+><i class="fa fa-2x fa-arrow-up" aria-hidden="true"></i></button>
 <script>
 window.onscroll = function() {
   scroll()
