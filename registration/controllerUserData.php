@@ -42,13 +42,13 @@ if (isset($_POST['signup'])) {
     $mail->isSMTP(); //Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
     $mail->SMTPAuth = true; // Enable SMTP authentication
-    $mail->Username = 'localfreelance7@gmail.com'; // SMTP username
+    $mail->Username = 'adamu.mulugeta97@gmail.com'; // SMTP username
     $mail->Password = 'NSR/7036/10M'; // SMTP password
     $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587; // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('localfreelance7@gmail.com', 'Admin'); // Sender email and name
+    $mail->setFrom('adamu.mulugeta97@gmail.com', 'Admin'); // Sender email and name
     $mail->addAddress($email); // Reciver email
                 $mail->isHTML(true);// Set email format to HTML
     $mail->Subject = 'verification code'; // Subject of the email

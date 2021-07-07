@@ -34,9 +34,12 @@
                         <input class="form-control button" type="submit" name="check-email" value="Continue">
                     </div>
                 </form>
+
+                
             </div>
         </div>
     </div>
+    
     
 </body>
 </html>
