@@ -43,9 +43,9 @@ require_once "../navigationbar.php";
                         <input class="form-control button" type="submit" name="login" value="Login">
                     </div>
                     <div class="link login-link text-center">Not yet a member? <br/>
-                    <a href="signup-user.php" style="text-decoration: underline;">Signup now as service provider </a ></div>
+                    <a href="SPRegistration.php" style="text-decoration: underline;">Signup now as service provider </a ></div>
                     <div class="link login-link text-center " style="margin-top:-30px;text-decoration: underline;"> <br/>
-                    <a href="signup-user.php">Signup now as service seeker</a></div>
+                    <a href="SSRegistration.php">Signup now as service seeker</a></div>
                 </form>
             </div>
         </div>

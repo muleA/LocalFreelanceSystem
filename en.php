@@ -13,7 +13,13 @@
 		"language" => "language",
 		"provider"=>"service provider",
 		"seeker"=>"service seeker",
+		"Hsp"=>"Hire service provider",
+		"Ap"=>"Announce Project",
+		"Tra"=>"Transaction",
 		"lang_en" => "English",
-		"lang_am"=>"አማርኛ"
+		"lang_am"=>"አማርኛ",
+		"project"=>"project",
+		"Notification"=>"Notification",
+		"Message"=>"Message"
 	);
 ?>
