@@ -44,26 +44,21 @@ include "../config.php";
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
-      <li class="nav-item">
-      <a class="nav-link" href="#"> <bold><?php echo $lang['home'];?>  |</bold><span class="sr-only">(current)</span>
-       </a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="#how"><?php  echo $lang['Hsp'];?>  |</a>
+      <a class="nav-link" href="Home.php"><?php  echo $lang['Hsp'];?>  |</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item ">
       <a class="nav-link" href="Announce_project.php"><?php echo $lang['Ap'];?>  |</a>
       </li> 
 
-      <li class="nav-item " >
-      <a class="nav-link" href="#about"><i class="fa fa-money-check-alt"></i><?php echo $lang['Tra']; ?> </a>
+      <li class="nav-item  mr-5" >
+      <a class="nav-link " href="#about"><i class="fa fa-money-check-alt"></i><?php echo $lang['Tra']; ?> </a>
       </li> 
 
-      <li class="nav-item " >
-      <a class="nav-link" href="#"><i class="fa fa-gavel" aria-hidden="true"></i><?php echo $lang['dispute']; ?> </a>
-      </li> 
+      
       <!-- drop down -->
-      <li class="nav-item dropdown " style="list-style-type: none;">
+      <li class="nav-item dropdown ml-5 " style="list-style-type: none;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa  fa-x fa-gift" aria-hidden="true"></i> <?php
                            echo $lang['project'];

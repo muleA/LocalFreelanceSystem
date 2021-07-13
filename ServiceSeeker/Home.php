@@ -12,31 +12,44 @@ include "navigation.php";
   padding-bottom: 25px;
   padding-left: 25px;
 }
+
+
+/*  */
 </style>
 
 <head>
   <script>
-    document.title="Serelance-Service seeker-Home";
+    document.title="Service seeker-Home";
     </script>
 </head>
-<div class="container-fluid mx-auto" style="margin-top: 100px;;">
-<div class="row">
+<div class="container mb-3" style="margin-top:100px;">
+  <div class="row">
   <div class="jumbotron mx-auto " style=" width:50%;   padding-top: 10px !important;
-  padding-bottom: 1px !important;   padding-left: 2px !important;
+  padding-bottom: 10px !important;   padding-left: 2px !important;
   padding-right: 2px !important;" >
-  <div class="col-sm-12 col-md-6 col-lg-12">
-  <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Search">
+    <div class="col-sm-12">
+<div class="input-group">
+  <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
   <div class="input-group-append">
-    <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+    <button type="button" class="btn btn-outline-primary"><i class="fa fa-search"></i></button>
+    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">By skill</a>
+      <a class="dropdown-item" href="#">By Rating</a>
+     <!--  <a class="dropdown-item" href="#">Something else here</a>
+      <div role="separator" class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a> -->
+    </div>
   </div>
 </div>
-  
+</div>
   </div>
 </div>
 </div>
-</div>
-  <div class="card w-100">
+<!--  -->
+  <div class="card " style="width:100%">
 <div class="container-fluid" style="margin-top:30px">
   <div class="row mx-auto">
 <!--  column 1 -->
