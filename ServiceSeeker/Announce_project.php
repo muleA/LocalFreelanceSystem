@@ -1,6 +1,3 @@
 <?php
-include_once "SSNavigationbar.php";
-
-
-
+include_once "Navigation.php";
 ?>

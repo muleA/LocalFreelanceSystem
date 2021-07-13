@@ -20,6 +20,7 @@
 		"lang_am"=>"አማርኛ",
 		"project"=>"project",
 		"Notification"=>"Notification",
-		"Message"=>"Message"
+		"Message"=>"Message",
+		"dispute"=>"dispute",
 	);
 ?>

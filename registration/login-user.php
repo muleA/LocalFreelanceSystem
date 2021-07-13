@@ -2,6 +2,14 @@
 require_once "../navigationbar.php";
 ?>
 <script>
+    
+/* var img = document.createElement("img");
+ 
+img.src = "/Image/Seralance logo.png";
+var src = document.getElementById("myImg");
+ 
+src.appendChild(img); */
+//document.getElementById("myImg").src = "/Image/Seralance logo.png";
 
 </script>
 <!DOCTYPE html>
@@ -40,7 +48,8 @@ require_once "../navigationbar.php";
                     </div>
                     <div class="link forget-pass text-left"><a href="forgot-password.php">Forgot password?</a></div>
                     <div class="form-group">
-                        <input class="form-control button" type="submit" name="login" value="Login">
+                        <input onclick="location.href='../ServiceSeeker/SSHome.php'" class="form-control button" type="submit" name="login" value="Login">
+                       
                     </div>
                     <div class="link login-link text-center">Not yet a member? <br/>
                     <a href="SPRegistration.php" style="text-decoration: underline;">Signup now as service provider </a ></div>

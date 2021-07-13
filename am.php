@@ -14,6 +14,7 @@
 		"provider"=>"አገልግሎት ሰጭ",
 		"seeker"=>"አገልግሎት ፈላጊ",
 	   "lang_en" => "English",
-        "lang_am"=>"አማርኛ"
+        "lang_am"=>"አማርኛ",
+		"dispute"=>"አለመግባባት",
 	);
 ?>

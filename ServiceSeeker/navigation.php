@@ -1,17 +1,15 @@
-<!DOCTYPE html>
 <?php
-   include "../config.php";
-   ?>
-<html>
-   <head>
-      <title><?php
-         echo $lang['title'];
-         ?></title>
-      <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="bootstrap.min.css">
-      <link rel="stylesheet" href="notifcation.css">
+include "../config.php";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
       <!-- jQuery library -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <!-- Popper JS -->
@@ -19,67 +17,53 @@
       <!-- Latest compiled JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-      <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-      <style>
-         ul{
-         list-style: none;
-         padding: 0;
-         margin: 0;
-         }
-         ul li{
-         float: left;
-         margin: 0 5px;
-         }
-         ul li a{
-         text-decoration:none;
-         }
-         ul li:hover{
-         border-bottom: 2px solid black;
-         }
-         .form-inline a.nav-link:hover{
-         border-bottom: 2px solid black;
-         }
-      </style>
-   </head>
-   <body>
-      <!--  navigation bar -->
-      <div class="container-fluid">
-         <div class="row">
-            <nav class="navbar navbar-expand-lg fixed-top " style="background-color: whitesmoke!important;">
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  .navbar-light .navbar-toggler {
+    color: black;
+    border-color: black;
+    font-weight: bolder;
+}
+.navbar-light .navbar-nav .nav-link {
+        color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-light fixed-top" style="background-color:whitesmoke!important;">
                <a class="navbar-brand" href="#"><img src="../Image/Seralance logo.png"></a>
-               <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border-color:blue"> 
-               <span class="dark-blue-text"><i
-                  class="fas fa-bars fa-1x"></i></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
-                           <bold><?php
-                              echo $lang['home'];
-                              ?>  |</bold>
-                           <span class="sr-only">(current)</span>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#how"><?php
-                           echo $lang['Hsp'];
-                           ?>  |</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="Announce_project.php"><?php
-                           echo $lang['Ap'];
-                           ?>  |</a>
-                     </li>
-                     <li class="nav-item" style="margin-right: 350px;;">
-                        <a class="nav-link" href="#about"><?php
-                           echo $lang['Tra'];
-                           ?> </a>
-                     </li>
-                     <!--  -->
-                     <li class="nav-item dropdown" style="list-style-type: none;">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon " style="color: black!important;"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+      <a class="nav-link" href="#"> <bold><?php echo $lang['home'];?>  |</bold><span class="sr-only">(current)</span>
+       </a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#how"><?php  echo $lang['Hsp'];?>  |</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="Announce_project.php"><?php echo $lang['Ap'];?>  |</a>
+      </li> 
+
+      <li class="nav-item " >
+      <a class="nav-link" href="#about"><i class="fa fa-money-check-alt"></i><?php echo $lang['Tra']; ?> </a>
+      </li> 
+
+      <li class="nav-item " >
+      <a class="nav-link" href="#"><i class="fa fa-gavel" aria-hidden="true"></i><?php echo $lang['dispute']; ?> </a>
+      </li> 
+      <!-- drop down -->
+      <li class="nav-item dropdown " style="list-style-type: none;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa  fa-x fa-gift" aria-hidden="true"></i> <?php
                            echo $lang['project'];
@@ -93,14 +77,14 @@
                            <a class="dropdown-item" href="index.php?lang=en">Offered Projects</a>
                         </div>
                      </li>
-                     <li class="nav-item ">
+                     <li class="nav-item  ">
                         <a class="nav-link" href="#faq"> <i class="fa fa-comment" aria-hidden="true"></i><?php
                            echo $lang['Message'];
                            ?>
                         <span class="badge rounded-pill badge-notification bg-danger" style="color: whitesmoke;">1</span>
                         </a>
                      </li>
-                     <li class="nav-item dropdown ml-2" style="list-style-type: none;margin-left:20px;">
+                     <li class="nav-item dropdown " style="list-style-type: none;margin-left:0px;">
                         <a class="nav-link dropdown-toggle" href="/viewnotification.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa  fa-x fa-bell" aria-hidden="true"></i> <?php
                            echo $lang['Notification'];
@@ -110,8 +94,10 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#CCE5FF">
                         </div>
                      </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0 " style="margin-right: 50px;;">
+
+      <!--  -->
+
+      <form class="form-inline my-2 my-lg-0 mr-auto ">
                      <li class="nav-item dropdown" style="list-style-type: none;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa  fa-x fa-user-circle" aria-hidden="true"></i> muleA
@@ -126,9 +112,12 @@
                         </div>
                      </li>
                   </form>
-               </div>
-            </nav>
-            <script>
+    </ul>
+  </div>  
+</nav>
+  <!--  -->
+
+  <script>
                const $dropdown = $(".dropdown");
                    const $dropdownToggle = $(".dropdown-toggle");
                    const $dropdownMenu = $(".dropdown-menu");
@@ -157,6 +146,6 @@
                        }
                    });
             </script>
-         </div>
-      </div>
-   </body>
+
+</body>
+</html>
