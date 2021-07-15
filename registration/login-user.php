@@ -48,7 +48,7 @@ src.appendChild(img); */
                     </div>
                     <div class="link forget-pass text-left"><a href="forgot-password.php">Forgot password?</a></div>
                     <div class="form-group">
-                        <input onclick="location.href='../ServiceSeeker/SSHome.php'" class="form-control button" type="submit" name="login" value="Login">
+                        <input onclick="location.href='../ServiceSeeker/Home.php'" class="form-control button" type="submit" name="login" value="Login">
                        
                     </div>
                     <div class="link login-link text-center">Not yet a member? <br/>
