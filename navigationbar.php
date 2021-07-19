@@ -99,6 +99,8 @@
          </div>
       </nav>
       <script>
+      /*    $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide'); */
          const $dropdown = $(".dropdown");
              const $dropdownToggle = $(".dropdown-toggle");
              const $dropdownMenu = $(".dropdown-menu");
@@ -126,4 +128,5 @@
                      $dropdown.off("mouseenter mouseleave");
                  }
              });
+             
       </script>

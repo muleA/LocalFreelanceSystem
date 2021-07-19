@@ -57,7 +57,7 @@
                   <div class="card-body">
                      <h4 class="card-title ">Mulugeta Adamu</h4>
                      <span class="card-text"> Front End developer</span>
-                     <a href="#" class="btn btn-primary btn-sm mt-2 mx-auto">View Profile</a>
+                     <a href="profile.php" class="btn btn-primary btn-sm mt-2 mx-auto">View Profile</a>
                   </div>
                </div>
             </div>

@@ -77,14 +77,17 @@
                   </a>
                </li>
                <li class="nav-item dropdown " style="list-style-type: none;margin-left:0px;">
-                  <a class="nav-link dropdown-toggle" href="/viewnotification.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="Notification/fetch.php" id="navbarDropdown" role="button" 
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fa  fa-x fa-bell" aria-hidden="true"></i> <?php
                      echo $lang['Notification'];
-                     ?>  <span class="badge rounded-pill badge-notification bg-danger"
-                     style="color: whitesmoke;">1</span>  
+                     ?>  
+                    
+                     <span class="badge rounded-pill label-danger count badge-notification bg-danger"
+                     style="color: whitesmoke;">1</span>   
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#CCE5FF">
-                  </div>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#CCE5FF">
+      </ul>
                </li>
                <!--  -->
                <form class="form-inline my-2   my-lg-0 ">
@@ -93,11 +96,12 @@
                      <i class="fa  fa-x fa-user-circle" aria-hidden="true"></i> muleA
                      </a>
                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:#CCE5FF">
-                        <a class="dropdown-item" href="index.php?lang=am">profile</a> 
-                        <a class="dropdown-item" href="index.php?lang=en">Dispute</a>
+                        <a class="dropdown-item" href="updateprofile.php">profile</a> 
+                        <a class="dropdown-item" href="Dispute.php">Dispute</a>
                         <a class="dropdown-item" href="index.php?lang=en"> ticket</a>
                         <a class="dropdown-item" href="index.php?lang=en">FAQ</a>
                         <a class="dropdown-item" href="index.php?lang=en">Policy</a>
+                        <a class="dropdown-item" href="changepassword.php">change password</a>
                         <a class="dropdown-item" href="index.php?lang=en">Logout</a>
                      </div>
                   </li>
@@ -135,5 +139,65 @@
                  }
              });
       </script>
+
+<!--  -->
+<!--  -->
+
+<script type = "text/javascript">
+$(document).ready(function(){
+	
+	function load_unseen_notification(view = '')
+	{
+		$.ajax({
+			url:"../Notification/fetch.php",
+			method:"POST",
+			data:{view:view},
+			dataType:"json",
+			success:function(data)
+			{
+			$('.dropdown-menu').html(data.notification);
+			if(data.unseen_notification > 0){
+			$('.count').html(data.unseen_notification);
+			}
+			}
+		});
+	}
+ 
+	load_unseen_notification();
+ 
+	$('#add_form').on('submit', function(event){
+		event.preventDefault();
+		if($('#title').val() != '' && $('#message').val() != ''){
+		var form_data = $(this).serialize();
+		$.ajax({
+			url:"../Nootification/add_notification.php",
+			method:"POST",
+			data:form_data,
+			success:function(data)
+			{
+			$('#add_form')[0].reset();
+			load_unseen_notification();
+			}
+		});
+		}
+		else{
+			alert("Enter Data First");
+		}
+	});
+ 
+	$(document).on('click', '.dropdown-toggle', function(){
+	$('.count').html('');
+	load_unseen_notification('yes');
+	});
+ 
+	setInterval(function(){ 
+		load_unseen_notification();; 
+	}, 5000);
+ 
+});
+</script>
+<!--  -->
+
+<!--  -->
    </body>
 </html>
