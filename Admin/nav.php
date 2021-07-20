@@ -7,28 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link href="img/logo/logo.png" rel="icon">
-  <title>RuangAdmin - Charts</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link href="css/serelance-admin.min.css" rel="stylesheet">
+  <!--   Datatable CSS -->
+<!--  -->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .sidebar-light .sidebar-brand {
+    color: #fafafa;
+  background-color: #A8F7EF;
+}
+span{font-weight: bolder!important}
+  </style>
 </head>
 
 <body id="page-top">
-  <div id="wrapper">
+  <div id="wrapper" >
     <!-- Sidebar -->
-    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar" style="color:black !important;;">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon">
-          <img src="img/logo/logo2.png">
+          <img src="img/logo/Seralance logo.png">
         </div>
-        <div class="sidebar-brand-text mx-3">RuangAdmin</div>
+        <div class="sidebar-brand-text mx-3"></div>
       </a>
       <hr class="sidebar-divider my-0">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span style="font-weight: bolder;">Dashboard</span></a>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
@@ -37,83 +46,137 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
-          <i class="far fa-fw fa-window-maximize"></i>
-          <span>Bootstrap UI</span>
+          <i class="fa fa-2x fa-users"></i>
+          <span>Users</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Bootstrap UI</h6>
-            <a class="collapse-item" href="alerts.html">Alerts</a>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="dropdowns.html">Dropdowns</a>
-            <a class="collapse-item" href="modals.html">Modals</a>
-            <a class="collapse-item" href="popovers.html">Popovers</a>
-            <a class="collapse-item" href="progress-bar.html">Progress Bars</a>
+           
+            <a class="collapse-item" href="admin_users.php">Admin Users</a>
+            <a class="collapse-item" href="service_providers.php">Service providers</a>
+            <a class="collapse-item" href="service_seekers.php">Service seekers</a>
           </div>
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
-          <i class="fab fa-fw fa-wpforms"></i>
-          <span>Forms</span>
+          <i class="fa fa-tasks"></i>
+          <span>Projects</span>
         </a>
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Forms</h6>
-            <a class="collapse-item" href="form_basics.html">Form Basics</a>
-            <a class="collapse-item" href="form_advanceds.html">Form Advanceds</a>
+            <a class="collapse-item" href="completed.php">Completed projects</a>
+            <a class="collapse-item" href="ongoing.php">Ongoing Projects</a>
+            <a class="collapse-item" href="announced.php">Announced  Projects</a>
+            <a class="collapse-item" href="offered.php">Offered Projects</a>
+            <a class="collapse-item" href="terminated.php">Terminated Projects</a>
           </div>
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
           aria-controls="collapseTable">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span>
+          <i class="fa fa-credit-card"></i>
+          <span>Transactions</span>
         </a>
         <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Tables</h6>
-            <a class="collapse-item" href="simple-tables.html">Simple Tables</a>
-            <a class="collapse-item" href="datatables.html">DataTables</a>
+          
+            <a class="collapse-item" href="transaction_history.php">Transaction history</a>
+            <a class="collapse-item" href="transfered_funds.php">Transferred funds</a>
+            <a class="collapse-item" href="fund_transfer_request.php">Fund Transfer requests</a>
           </div>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="ui-colors.html">
-          <i class="fas fa-fw fa-palette"></i>
-          <span>UI Colors</span>
+        <a class="nav-link" href="bids.php">
+          <i class="fa fa-gavel"></i>
+          <span>Bids</span>
         </a>
       </li>
-      <hr class="sidebar-divider">
-      <div class="sidebar-heading">
-        Examples
-      </div>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
-          aria-controls="collapsePage">
-          <i class="fas fa-fw fa-columns"></i>
-          <span>Pages</span>
+        <a class="nav-link" href="notification.php">
+          <i class="fa fa-bell"></i>
+          <span>Notification</span>
         </a>
-        <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+      </li>
+      <!-- dispute -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsedispute" aria-expanded="true"
+          aria-controls="collapseTable">
+           <i class="far fa-thumbs-down"></i>
+          <span>Disputes</span>
+        </a>
+        <div id="collapsedispute" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Example Pages</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+          
+            <a class="collapse-item" href="open_disputes.php">Open Disputes</a>
+            <a class="collapse-item" href="closed_dispute.php">Closed Dsputes</a>
           </div>
         </div>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span>
+      <!--  -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTicket" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fa fa-ticket" aria-hidden="true"></i>
+          <span>Ticket</span>
+        </a>
+        <div id="collapseTicket" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+          
+            <a class="collapse-item" href="open_tickets.php">Open Ticket</a>
+            <a class="collapse-item" href="closed_dispute.php">Closed Ticket</a>
+          </div>
+        </div>
+      </li>
+<!--  -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsepolicy" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fa fa-ticket" aria-hidden="true"></i>
+          <span>Policy</span>
+        </a>
+        <div id="collapsepolicy" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+          
+            <a class="collapse-item" href="view_policy.php">View policy</a>
+            <a class="collapse-item" href="edit_policy.php">Edit policy</a>
+          </div>
+        </div>
+      </li>
+      <!--  -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsefaq" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+          <span>FAQS</span>
+        </a>
+        <div id="collapsefaq" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+          
+            <a class="collapse-item" href="view_faqs.php">View FAQS</a>
+            <a class="collapse-item" href="edit_faqs.php">Edit FAQS</a>
+          </div>
+        </div>
+      </li>
+   
+      <li class="nav-item">
+        <a class="nav-link" href="profile.php">
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
+          <span>profile</span>
         </a>
       </li>
-      <hr class="sidebar-divider">
-      <div class="version" id="version-ruangadmin"></div>
+
+      <li class="nav-item">
+        <a class="nav-link" href="logout.php">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+  
     </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -227,7 +290,8 @@
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
               </div>
             </li>
-            <li class="nav-item dropdown no-arrow mx-1">
+            <!--  -->
+           <!--  <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-tasks fa-fw"></i>
@@ -273,13 +337,15 @@
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
               </div>
-            </li>
+            </li> -->
+            <!--  -->
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">Mulegeta Adamu</span>  <i class = "fas fa-2x fa-angle-down " 
+                ></i>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
@@ -303,133 +369,3 @@
             </li>
           </ul>
         </nav>
-        <!-- Topbar -->
-        <!-- Container Fluid-->
-        <div class="container-fluid" id="container-wrapper">
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Charts</h1>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Charts</li>
-            </ol>
-          </div>
-          <!-- Row -->
-          <div class="row">
-            <!-- Area Charts -->
-            <div class="col-lg-12">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the area chart can be found in the
-                  <code>/js/demo/chart-area-demo.js</code> file.
-                </div>
-              </div>
-            </div>
-            <!-- Bar Chart -->
-            <div class="col-lg-8">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the bar chart can be found in the <code>/js/demo/chart-bar-demo.js</code> file.
-                </div>
-              </div>
-            </div>
-            <!-- Donut Chart -->
-            <div class="col-lg-4">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-pie pt-4">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <hr>
-                  Styling for the donut chart can be found in the <code>/js/demo/chart-pie-demo.js</code> file.
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--Row-->
-
-          <!-- Documentation Link -->
-          <div class="row">
-            <div class="col-lg-12">
-              <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme. The
-                charts below have been customized - for further customization options, please visit the <a
-                  target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js documentation</a>.</p>
-            </div>
-          </div>
-
-          <!-- Modal Logout -->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Are you sure you want to logout?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-        <!---Container Fluid-->
-      </div>
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
-              <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
-            </span>
-          </div>
-        </div>
-      </footer>
-      <!-- Footer -->
-    </div>
-  </div>
-
-  <!-- Scroll to top -->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="js/ruang-admin.min.js"></script>
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="js/demo/chart-bar-demo.js"></script>
-</body>
-
-</body>
-
-</html>

@@ -10,21 +10,22 @@
   <title>Serelance Admin - Dashboard</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link href="css/serelance-admin.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     .sidebar-light .sidebar-brand {
     color: #fafafa;
-    background-color:powderblue;
+  background-color: #A8F7EF;
 }
+span{font-weight: bolder!important}
   </style>
 </head>
 
 <body id="page-top">
-  <div id="wrapper">
+  <div id="wrapper" >
     <!-- Sidebar -->
-    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar" style="color:black !important;;">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon">
           <img src="img/logo/Seralance logo.png">
         </div>
@@ -32,9 +33,9 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span style="font-weight: bolder;">Dashboard</span></a>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
@@ -49,9 +50,9 @@
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
            
-            <a class="collapse-item" href="alerts.html">Admin Users</a>
-            <a class="collapse-item" href="buttons.html">Service providers</a>
-            <a class="collapse-item" href="dropdowns.html">Service seekers</a>
+            <a class="collapse-item" href="admin_users.php">Admin Users</a>
+            <a class="collapse-item" href="service_providers.php">Service providers</a>
+            <a class="collapse-item" href="service_seekers.php">Service seekers</a>
           </div>
         </div>
       </li>
@@ -159,10 +160,7 @@
           </div>
         </div>
       </li>
-    <!--   <hr class="sidebar-divider"> -->
-    <!--   <div class="sidebar-heading">
-        
-      </div> -->
+   
       <li class="nav-item">
         <a class="nav-link" href="ui-colors.html">
           <i class="fa fa-user"></i>
@@ -290,7 +288,8 @@
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
               </div>
             </li>
-            <li class="nav-item dropdown no-arrow mx-1">
+            <!--  -->
+           <!--  <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-tasks fa-fw"></i>
@@ -336,13 +335,15 @@
                 </a>
                 <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
               </div>
-            </li>
+            </li> -->
+            <!--  -->
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Maman Ketoprak</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">Mulegeta Adamu</span>  <i class = "fas fa-2x fa-angle-down " 
+                ></i>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="#">
@@ -373,7 +374,7 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
             </ol>
           </div>
@@ -667,13 +668,7 @@
           </div>
           <!--Row-->
 
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <p>Do you like this template ? you can download from <a href="https://github.com/indrijunanda/RuangAdmin"
-                  class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-fw fa-github"></i>&nbsp;GitHub</a></p>
-            </div>
-          </div>
-
+      
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
@@ -704,7 +699,7 @@
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
-              <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
+              <b><a href="#" target="_blank">Serelance.com</a></b>
             </span>
           </div>
         </div>

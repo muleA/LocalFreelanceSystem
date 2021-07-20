@@ -38,6 +38,7 @@
                   </div>
                </div>
             </div>
+            
             <!--  -->
             <div class="table table-responsive">
                <table id = "table" class = "table table-bordered table-striped">
