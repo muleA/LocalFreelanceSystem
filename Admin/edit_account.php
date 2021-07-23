@@ -1,3 +1,4 @@
+
 <?php
 require_once "nav.php";
 require_once "../Database/db.php";
@@ -13,13 +14,13 @@ require_once "../Database/db.php";
  <!-- Container Fluid-->
  <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Service seekers</h1>
+            <h1 class="h3 mb-0 text-gray-800">Admin users</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 <a href="./">Home</a>
               </li>
-              <li class="breadcrumb-item">Users</li>
-              <li class="breadcrumb-item active" aria-current="page">Service seekers</li>
+              <li class="breadcrumb-item"> Admin Account</li>
+              <li class="breadcrumb-item active" aria-current="page">Update Account details</li>
             </ol>
           </div>
           <div class="row">
@@ -27,63 +28,51 @@ require_once "../Database/db.php";
             <div class="col-lg-12">
               <div class="card shadow-sm mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">List of service seekers</h6>
+                  <h6 class="m-0 font-weight-bold text-primary mx-auto">Update your Account</h6>
                 </div>
                 <div class="card-body">
 <!--  -->
-                <!--  -->
 
-            <div class="table table-responsive">
-              
+<!-- display form with current values -->
 
-               <table id = "table" class = "table table-bordered table-striped">
+<?php
+$query = $con->query("SELECT * FROM Account WHERE Username = '$_REQUEST[Username]'") or die(mysqli_error($con));
+					$fetch = $query->fetch_array();
 
-                  <thead>
-                     <tr>
-                        <th>No</th>
-                        <th> Username</th>
-                        <th> FullName</th>
-                        <th> Date joined</th>
-                        <th>Account status</th>
-                        <th> Details</th>
-                        <th> transaction</th>
-                        <th> Activate</th>
-                        <th>Suspend</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <?php
-                        $query = $con->query("SELECT * FROM transaction") or die(mysqli_error($con));
-                        while($fetch = $query->fetch_array()){
-                        ?>	
-                     <tr>
-                        <td><?php echo $fetch['No']?></td>
-                        <td><?php echo $fetch['Tid']?></td>
-                        <td><?php echo $fetch['Tdetails']?></td>
-                        <td><?php echo $fetch['Tdate']?></td>
-                        <td><?php echo $fetch['Amount']?></td>
-                       
-                        <td><a class = "btn btn-primary btn-sm" href = "#">
-                           <i class = "fa fa-eye">view </i> </a> 
-                        </td>
-                        <td><a class = "btn btn-primary btn-sm" href = "#">
-                           Transaction </a> 
-                        </td>
-                        <td><a class = "btn btn-success btn-sm" href = "#">Activate
-                         </a> 
-                        </td>
-                        <td>
-                           <a class = "btn btn-danger btn-sm" onclick =
-                              "confirmationDelete(this); return false;" 
-                              href = "#">Suspend<a>
-                        </td>
-                     </tr>
-                     <?php
-                        }
-                        ?>	
-                  </tbody>
-               </table>
-            </div>
+				?>
+				<br />
+<div class = "col-md-6 mx-auto">	
+    <form method = "POST" action = "edit_query_account.php?Username=<?php echo $fetch['Username']?>">
+        <div class = "form-group">
+            <label>No </label>
+            <input type = "text" class = "form-control" value = "<?php echo $fetch['No']?>" name = "No" />
+        </div>
+        <div class = "form-group">
+            <label>Username </label>
+            <input type = "text" class = "form-control" value = "<?php echo $fetch['Username']?>" name = "Username" />
+        </div>
+        <div class = "form-group">
+            <label>FullName</label>
+            <input type = "text" class = "form-control" value = "<?php echo $fetch['FullName']?>" name = "FullName" />
+        </div>
+        <div class = "form-group">
+            <label>Role</label>
+            <input type = "text" class = "form-control" value = "<?php echo $fetch['Role']?>" name = "Role" />
+        </div>
+        <div class = "form-group">
+            <label>Created by</label>
+            <input type = "text" class = "form-control" value = "<?php echo $fetch['Createdby']?>" name = "CreatedBy" />
+        </div>
+        <br />
+        <div class = "form-group">
+            <button name = "edit_account" class = "btn btn-success btn-sm  form-control">
+                <i class = "fa fa-check-circle"></i> Save Changes</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
             <!--  -->
          </div>
       </div>

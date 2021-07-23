@@ -35,22 +35,19 @@ require_once "../Database/db.php";
 <!--  -->
                 <!--  -->
                 <div class="table table-responsive mt-3">
-                <a class = "btn btn-success mb-3" href = "push_notification.php">
+                <a class = "btn btn-primary btn-sm mb-3" href = "push_notification.php">
                   <i class = "fa  fa-plus-circle"></i> push new notification</a>
 
                <table id = "table" class = "table table-bordered table-striped">
                   <thead>
                      <tr>
                        <th>No</th>
-                       <th>Bid Id</th>
-                        <th>Project Id</th>
-                        <th>Project Title</th>
-                        <th>service provider</th>
-                        <th>service seeker </th>
-                        <th>Bid price</th>
-                        <th>Bid date</th>
-                        <th>Bid description</th>
-                        <th>View project</th>
+                       <th>Notification Id</th>
+                        <th>Title</th>
+                        <th>Message</th>
+                        <th>DateTime</th>
+                        <th>Notified By </th>
+                       
                      </tr>
                   </thead>
                   <tbody>
@@ -66,16 +63,6 @@ require_once "../Database/db.php";
                         <td><?php echo $fetch['odate']?></td>
                         <td><?php echo $fetch['pbudget']?></td>
                         <td><?php echo $fetch['status']?></td>   
-                        <td><?php echo $fetch['status']?></td>          
-                        <td><?php echo $fetch['status']?></td>                 
-                        <td><a class = "btn btn-primary" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
-                           <i class="fa fa-eye"></i></a> 
-                        </td>
-                        <td><a class = "btn btn-primary" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
-                           <i class="fa fa-eye"></i></a> 
-                        </td>
-                       
-                       
                      </tr>
                      <?php
                         }

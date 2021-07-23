@@ -8,40 +8,32 @@ require_once "../Database/db.php";
 <head>
   <link rel="stylesheet" href="vendor/datatables/dataTables.bootstrap4.css">
   <script>
-    document.title="Admin-view  policy";
+    document.title="Admin-view  FAQs";
 </script>
 </head>
 
  <!-- Container Fluid-->
  <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">View policies </h1>
+            <h1 class="h3 mb-0 text-gray-800">Frequently Asked Questions </h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 <a href="./">Home</a>
               </li>
-              <li class="breadcrumb-item">Policy</li>
-              <li class="breadcrumb-item active" aria-current="page">View policy </li>
+              <li class="breadcrumb-item">FAQS</li>
+              <li class="breadcrumb-item active" aria-current="page">View FAQS </li>
             </ol>
           </div>
           <div class="row">
             <!-- Alerts Basic -->
-            <div class="col-lg-8 mx-auto">
+            <div class="col-lg-10 mx-auto">
               <div class="card shadow-sm mb-4 ">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">List of of policy</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">List of of FAQs</h6>
                 </div>
                 <div class="card-body">
 <!--  -->
-<div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active">
-    Policy one
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">policy two</a>
-  <a href="#" class="list-group-item list-group-item-action">policy three</a>
-  <a href="#" class="list-group-item list-group-item-action">Policy four</a>
-  <a href="#" class="list-group-item list-group-item-action disabled">policy five</a>
-</div>
+
             <!--  -->
          </div>
       </div>

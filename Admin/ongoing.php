@@ -66,8 +66,8 @@ require_once "../Database/db.php";
                         <td><?php echo $fetch['status']?></td>
                      <!--  -->
                        
-                        <td><a class = "btn btn-info" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
-                           <i class="fa fa-eye"></i></a> 
+                        <td><a class = "btn btn-primary btn-sm" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
+                           <i class="fa fa-eye">view</i></a> 
                         </td>
                      </tr>
                      <?php

@@ -96,7 +96,7 @@ require_once "../Database/db.php";
 require_once "footer.php";
      ?>
 
-    </div>
+    </div>  
   </div>
   <!-- Scrollto to top -->
   <a class="scroll-to-top rounded" href="#page-top">

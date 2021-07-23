@@ -13,26 +13,27 @@ require_once "../Database/db.php";
  <!-- Container Fluid-->
  <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Admin users</h1>
+            <h1 class="h3 mb-0 text-gray-800">Service providers</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
                 <a href="./">Home</a>
               </li>
               <li class="breadcrumb-item">Users</li>
-              <li class="breadcrumb-item active" aria-current="page">Admin users</li>
+              <li class="breadcrumb-item active" aria-current="page">Service providers</li>
             </ol>
           </div>
           <div class="row">
-            <!-- Alerts Basic -->
+            <!-- content -->
             <div class="col-lg-12">
               <div class="card shadow-sm mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">List of Admin Users</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">List of Service providers</h6>
+     
                 </div>
                 <div class="card-body">
-<!--  -->
-                <!--  -->
 
+<!--  -->
+            
             <div class="table table-responsive">
               
 
@@ -63,20 +64,19 @@ require_once "../Database/db.php";
                         <td><?php echo $fetch['Tdate']?></td>
                         <td><?php echo $fetch['Amount']?></td>
                        
-                        <td><a class = "btn btn-primary" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
-                           <i class = "fa fa-eye">view </i> </a> 
+                        <td><button class = "btn btn-primary btn-sm" data-toggle="modal" type="button" data-target= "#viewsp">
+                           <i class = "fa fa-eye">view </i> </button> 
                         </td>
-                        <td><a class = "btn btn-primary" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
-                           <i class = "fa fa-dollar"></i> </a> 
+                        <td><a class = "btn btn-primary btn-sm" href = "#">
+                         Transaction </a> 
                         </td>
-                        <td><a class = "btn btn-success" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
-                           <i class = "fa fa-play"></i> </a> 
+                        <td><a class = "btn btn-success btn-sm" href = "#">
+                          Activate </a> 
                         </td>
                         <td>
-                           <a class = "btn btn-danger" onclick =
+                           <a class = "btn btn-danger btn-sm" onclick =
                               "confirmationDelete(this); return false;" 
-                              href = "edit_permission.php?room_id=<?php echo $fetch['room_id']?>"><i class =
-                              "fa fa-ban"></i></a>
+                              href = "#">Suspend</a>
                         </td>
                      </tr>
                      <?php
@@ -85,6 +85,44 @@ require_once "../Database/db.php";
                   </tbody>
                </table>
             </div>
+            <!-- modals -->
+            <div class="modal" id="viewsp" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <!--  -->
+
+      <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Cras justo odio
+    <span class="badge badge-primary badge-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Dapibus ac facilisis in
+    <span class="badge badge-primary badge-pill">2</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    Morbi leo risus
+    <span class="badge badge-primary badge-pill">1</span>
+  </li>
+</ul>
+      <!--  -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
             <!--  -->
          </div>
       </div>

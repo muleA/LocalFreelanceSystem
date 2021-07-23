@@ -69,8 +69,8 @@ require_once "../Database/db.php";
                      
                      <!--  -->
                        
-                        <td><a class = "btn btn-primary" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
-                           <i class="fa fa-eye"></i></a> 
+                        <td><a class = "btn btn-primary btn-sm" href = "edit_room.php?room_id=<?php echo $fetch['room_id']?>">
+                           <i class="fa fa-eye">view</i></a> 
                         </td>
                        
                      </tr>
@@ -101,9 +101,7 @@ require_once "../Database/db.php";
             </div>
 
            
-        
-        
-
+    
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
