@@ -1,38 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="local freelance system">
+  <meta name="author" content="serelance develpers">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/serelance-admin.min.css" rel="stylesheet">
+  <link href="css/serelance-admin.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  <!-- styles css -->
-  <style>
-          .sidebar-light .sidebar-brand {
-                color: #fafafa;
-              background-color: #b8c7fF;
-                    }
-            span{font-weight: bolder!important}
-            .sidebar-light .nav-item .nav-link {
-                color: black!important;
-                  }
-           .sidebar-light .nav-item .nav-link[data-toggle=collapse]::after {
-                color: blue;
-                  }
-
-            .sidebar-light .nav-item .nav-link i {
-                color: black;
-                }
-
-  </style>
-
-  <!--  -->
+<link rel="stylesheet" href="vendor/datatables/dataTables.bootstrap4.css">
 </head>
 
 <body id="page-top">
@@ -315,7 +294,7 @@
                 ></i>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="profile.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -337,7 +316,7 @@
           </ul>
         </nav>
 
-        <!--  -->
+        <!-- navigation ends -->
 
 
         

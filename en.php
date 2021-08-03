@@ -13,7 +13,7 @@
 		"language" => "language",
 		"provider"=>"service provider",
 		"seeker"=>"service seeker",
-		"Hsp"=>"Hire service provider",
+		"Hsp"=>"Browse service provider",
 		"Ap"=>"Announce Project",
 		"Tra"=>"Transaction",
 		"lang_en" => "English",

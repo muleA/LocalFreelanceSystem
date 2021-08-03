@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 require "connection.php";
 use PHPMailer\PHPMailer\PHPMailer;
@@ -43,7 +43,7 @@ if (isset($_POST['signup'])) {
     $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
     $mail->SMTPAuth = true; // Enable SMTP authentication
     $mail->Username = 'adamu.mulugeta97@gmail.com'; // SMTP username
-    $mail->Password = 'NSR/7036/10M'; // SMTP password
+    $mail->Password = '#'; // SMTP password
     $mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587; // TCP port to connect to
 
