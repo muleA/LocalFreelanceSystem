@@ -1,6 +1,9 @@
 <?php
    include "navigation.php";
    ?>
+<!--  -->
+
+   <!--  -->
 	<style>
 	.col-form-label-sm {
 		padding-top: calc(.25rem + 1px);
@@ -62,7 +65,7 @@
 					<div class="form-group row">
 						<label for="colFormLabelSm" class="col-sm-4 col-form-label col-form-label-sm"> Skills </label>
 						<div class="col-sm-8">
-							<select class="custom-select" name="select1" id="" required>
+							<select class="custom-select" name="select1" id=""  required>
 								<option value=""> Select skills needed</option>
 								<option value="Accounting & Consulting">Accounting & Consulting</option>
 								<option value="Admin Support">Admin Support</option>
@@ -98,6 +101,8 @@
 			</div>
 		</div>
 	</div>
+
+	
 	<!--  -->
 	<!-- included files -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

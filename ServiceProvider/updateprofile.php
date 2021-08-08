@@ -5,15 +5,73 @@
 	<!doctype html>
 	<html>
 
-	<head> </head>
+	<head>
+		<script> document.title="Service provider- update profile" </script>
+	<style>
+	/*Profile Pic Start*/
+.picture-container{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.picture{
+    width: 150px;
+    height: 150px;
+    background-color: #999999;
+    border: 4px solid #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+.picture:hover{
+    border-color: #2ca8ff;
+}
+.content.ct-wizard-green .picture:hover{
+    border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover{
+    border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover{
+    border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover{
+    border-color: #ff3b30;
+}
+.picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.picture-src{
+    width: 100%;
+    
+}
+/*Profile Pic End*/
+
+
+	</style>
+
+</head>
 
 	<body>
 		<div class="container  " style="margin-top: 100px;">
+			<form>
 			<div class="card shadow-sm mb-4">
 				<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
 					<h6 class="m-0 font-weight-bold text-primary mx-auto">Update Profile</h6> </div>
 				<div class="card-body">
 					<div class="row">
+					
 						<div class="col-sm-8">
 							<div class="form-group row">
 								<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">First Name</label>
@@ -70,9 +128,19 @@
 						<!-- next column  -->
 						<div class="col-sm-3 ">
 							<div class="form-group text-center mr-5">
-								<label class="control-label">Photo Preview</label>
+			<div class="container mx-auto">
+    <div class="picture-container">
+        <div class="picture">
+            <img src="../Image/profile.jpg" class="picture-src" id="wizardPicturePreview" title="">
+            <input type="file" id="wizard-picture" class="">
+        </div>
+         <h6 class="">Choose Picture</h6>
+
+    </div>
+</div>
+								<!-- <label class="control-label">Photo Preview</label>
 								<div class="input-group"> <img src="../Image/profile.jpg" id="output" class="img-rounded" alt="No photo to view" width="200" height="180"> </div>
-								<button class="btn btn-success">upload photo</button>
+								<button class="btn btn-success">upload photo</button> -->
 							</div>
 						</div>
 					</div>
@@ -133,11 +201,32 @@
 				</div>
 				<!--  -->
 			</div>
+			</form>
 		</div>
 		</div>
 		</div>
 		</div>
 		</div>
+			<script>
+
+
+	$(document).ready(function(){
+// Prepare the preview for profile picture
+    $("#wizard-picture").change(function(){
+        readURL(this);
+    });
+});
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+	</script>
 		<?php
 include "../ServiceSeeker/Footer.php";
 ?>

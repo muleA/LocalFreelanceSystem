@@ -37,14 +37,8 @@ if (isset($_POST["view"])) {
  );
 }
   echo json_encode($data);
-    if ($data['unseen_notification']===0) {
-        "<script type='text/javascript'>
-    $(document).ready(function() {
-        document.getElementById('#badge').style.background-color='white';
-    });
-    <script>";
-    }
-
+    
+    
  
 /* function to hold notification puhsed date  */
 

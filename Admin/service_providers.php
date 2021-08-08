@@ -69,6 +69,7 @@ document.title="admin-list of service providers"
                         <td><a class = "btn btn-primary btn-sm" href = "#">
                          Transaction </a> 
                         </td>
+                        
                         <td><a class = "btn btn-success btn-sm" href = "#">
                           Activate </a> 
                         </td>
